@@ -1,0 +1,20 @@
+<h3>以下の内容で、送信する。</h3>
+
+<%= form_for(@contact) do |f| %>
+  <!-- `f.hidden_field`を使用して、リクエストパラメータに値を設定できるようにしています。 -->
+  <%= f.hidden_field :name %>
+  <%= f.hidden_field :email %>
+  <%= f.hidden_field :content %>
+  <!-- 表示用の値を画面に出力しています。 -->
+  <p>Name:<%= @contact.name %></p>
+  <p>Email:<%= @contact.email %></p>
+  <p>Contetnt:<%= @contact.content %></p>
+  <%= f.submit "送信する" %>
+<% end %>
+
+<%= form_for(@contact, url: new_blog_path, method: 'get') do |f| %>
+  <%= f.hidden_field :name %>
+  <%= f.hidden_field :email %>
+  <%= f.hidden_field :content %>
+  <%= f.submit "もどる", name: 'back' %>
+<% end %>

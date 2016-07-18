@@ -1,0 +1,9 @@
+<h1>お問い合わせ一覧</h1>
+
+<% @contacts.each do |contact| %>
+  <p>名前:<%= contact.name %></p>
+  <p>アドレス:<%= contact.email %></p>
+  <p>お問い合わせ内容:<%= contact.content %></p>
+<% end %>
+
+<%= link_to "ブログ一覧画面にもどる", blogs_path %>
