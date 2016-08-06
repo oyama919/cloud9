@@ -1,14 +1,32 @@
 // Place all the styles related to the contacts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.btn{
-    background:#eee;
-    width:80px;
-    
-    /*text-align:center;
-    vertical-align:midlle;*/
+.wrapper {
+  margin: 0px auto;
+  padding: 20px 20px 20px 35px;
+  .row {
+    border-bottom: 1px solid #ccc;
+    padding: 20px;
+    text-align: left;
+    word-wrap: break-word;
+  }
+}
+input[type="submit"].btn-block{
+  margin: 15px 0;
+}
+html.boody{
+  width:100%;
+}
+table{
+  width:100%;
+  display : table; 
+  table-layout : fixed;
+  word-wrap: break-word; 
 }
 
-.btn:hover{
-    opacity:0.8;
+p{
+  word-wrap: break-word;
+}
+.new_contact{
+  margin-bottom:10px;
 }

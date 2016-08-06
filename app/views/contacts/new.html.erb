@@ -1,28 +1,31 @@
-<p><%= notice %></p>
-
-  <%= form_for(@contact, url: choose_new_or_edit) do |f| %>
-   <% if @contact.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= @contact.errors.count %>件のエラーがあります。</h2>
-
-      <ul>
-      <% @contact.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
+<div class="container">
+  <div class="col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-1">
+    <p><%= notice %></p>
+      <%= form_for(@contact, url: choose_new_or_edit_c) do |f| %>
+       <% if @contact.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= @contact.errors.count %>件のエラーがあります。</h2>
+    
+          <ul>
+          <% @contact.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+          </ul>
+        </div>
       <% end %>
-      </ul>
-    </div>
-  <% end %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
-  <br>
-  <%= f.label :email %>
-  <%= f.text_field :email %>
-  <br>
-  <br>
-  <%= f.label :content %>
-  <%= f.text_field :content %>
-  <br>
-  <%= f.submit '登録',class:"btn" %>
-<% end %>
-
-<%= link_to "ブログ一覧画面にもどる", blogs_path %>
+      <%= f.label :name %>
+      <%= f.text_field :name, class: 'form-control' %>
+      <br>
+      <%= f.label :email %>
+      <%= f.text_field :email, class: 'form-control' %>
+      <br>
+      <br>
+      <%= f.label :content %>
+      <%= f.text_area :content, class: 'form-control' %>
+      <br>
+      <%= f.submit '登録',class:"btn btn-default btn-sm btn-success" %>
+    <% end %>
+    
+    <%= link_to "ブログ一覧画面にもどる", blogs_path %>
+  </div>
+</div>

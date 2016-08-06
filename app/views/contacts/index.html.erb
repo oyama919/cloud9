@@ -1,9 +1,20 @@
-<h1>お問い合わせ一覧</h1>
+<div class="container">
+  <div class="wrapper col-md-8 col-md-offset-2 col-sm-10">
+    <h1>お問い合わせ一覧</h1>
+    <table class="table left">
+      <% @contacts.each do |contact| %>
+      <tr>
+        <td class="info">名前:<%= contact.name %></td>
+      </tr>
+      <tr>
+        <td>アドレス:<%= contact.email %></td>
+      </tr>
+      <tr>
+        <td>お問い合わせ内容:<br><span><%= contact.content %></span></td>
+      </tr>
+      <% end %>
+    </table>
 
-<% @contacts.each do |contact| %>
-  <p>名前:<%= contact.name %></p>
-  <p>アドレス:<%= contact.email %></p>
-  <p>お問い合わせ内容:<%= contact.content %></p>
-<% end %>
-
-<%= link_to "ブログ一覧画面にもどる", blogs_path %>
+    <%= link_to "ブログ一覧画面にもどる", blogs_path %>
+  </div>
+</div>
