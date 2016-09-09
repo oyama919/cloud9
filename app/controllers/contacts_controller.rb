@@ -2,7 +2,7 @@ class ContactsController < ApplicationController
   def index
     @contacts = Contact.all
   end
-  
+
   def new
     if params[:back]
       @contact = Contact.new(contacts_params)
@@ -10,22 +10,23 @@ class ContactsController < ApplicationController
       @contact = Contact.new
     end
   end
-  
+
   def confirm
     @contact = Contact.new(contacts_params)
-    # raise @contact.inspect 
+    # raise @contact.inspect
     render :new if @contact.invalid?
   end
-  
+
   def create
     @contact = Contact.new(contacts_params)
     if @contact.save
       redirect_to root_path,notice:"お問い合わせありがとうございました！"
+      NoticeMailer.sendmail_blog(@blog).deliver
     else
       render action: 'new'
     end
   end
-  
+
   private
     def contacts_params
       params.require(:contact).permit(:name,:email,:content)
