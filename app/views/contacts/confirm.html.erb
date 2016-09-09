@@ -11,7 +11,7 @@
     <p>Email:<%= @contact.email %></p>
     <p>Contetnt:</p>
     <p><%= @contact.content %></p>
-    <%= f.submit "送信する", class: 'btn btn-default btn-sm btn-success mt' %>
+    <%= f.submit "送信する", class: 'btn btn-default btn-sm btn-success mt', action: 'sendmail_contact' %>
   <% end %>
 
   <%= form_for(@contact, url: new_contact_path, method: 'get') do |f| %>

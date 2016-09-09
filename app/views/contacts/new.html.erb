@@ -5,7 +5,7 @@
        <% if @contact.errors.any? %>
         <div id="error_explanation">
           <h2><%= @contact.errors.count %>件のエラーがあります。</h2>
-    
+
           <ul>
           <% @contact.errors.full_messages.each do |msg| %>
             <li><%= msg %></li>
@@ -25,7 +25,7 @@
       <br>
       <%= f.submit '登録',class:"btn btn-default btn-sm btn-success" %>
     <% end %>
-    
+
     <%= link_to "ブログ一覧画面にもどる", blogs_path %>
   </div>
 </div>
