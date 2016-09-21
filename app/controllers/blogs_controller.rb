@@ -1,4 +1,4 @@
-class BlogsController < ApplicationController
+qclass BlogsController < ApplicationController
   before_action :authenticate_user!
   before_action :set_blog, only: [:edit, :update, :destroy]
 
