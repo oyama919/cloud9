@@ -19,3 +19,10 @@ mt{
 footer{
     margin-top: 100px;
 }
+img{
+  max-width: 100%;
+}
+.row img{
+  float: left;
+  margin: 10px 10px 0 0;
+}

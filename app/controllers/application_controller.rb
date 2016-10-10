@@ -5,7 +5,11 @@ class ApplicationController < ActionController::Base
   # before_actionでdeviseのストロングパラメーターにnameカラムを追加するメソッドを実行します。
   before_action :configure_permitted_parameters, if: :devise_controller?
 
-  PERMISSIBLE_ATTRIBUTES = %i(name)
+  rescue_from CanCan::AccessDenied do |exception|
+    redirect_to main_app.root_url, :alert => exception.message
+  end
+
+  PERMISSIBLE_ATTRIBUTES = %i(name avatar avatar_cache)
 
   protected
 
