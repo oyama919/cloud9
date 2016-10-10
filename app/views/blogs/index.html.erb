@@ -10,10 +10,12 @@
       <%= link_to "ブログを作成する", new_blog_path, class: 'btn btn-default' %>
     <% @blogs.each do |blog| %>
     <div class="row">
-      <% if blog.user.avatar.model.avatar.present?%>
+      <% if blog.user.avatar.model.avatar.present? %>
         <%= image_tag blog.user.avatar, size: "100x100",alt: "avatar" %>
+      <% elsif blog.user? %>
+        <%= image_tag blog.user.image_url, size: "100x100",alt: "avatar" %>
       <% else %>
-        <%= image_tag "no_image.png", size: "100x100",alt: "avatar" %>
+        <%= image_tag "no_image.png", size: "100x100",alt: "no_image" %>
       <% end %>
       <h4><small><%= blog.user.name %>がブログを投稿しました&nbsp;&nbsp;&nbsp;ID:&nbsp;&nbsp;<%= blog.user.id %></small></h4>
       <h5><strong><%= blog.title %></strong></h5>
