@@ -12,7 +12,7 @@
     <div class="row">
       <% if blog.user.avatar.model.avatar.present? %>
         <%= image_tag blog.user.avatar, size: "100x100",alt: "avatar" %>
-      <% elsif blog.user? %>
+      <% elsif blog.user.image_url %>
         <%= image_tag blog.user.image_url, size: "100x100",alt: "avatar" %>
       <% else %>
         <%= image_tag "no_image.png", size: "100x100",alt: "no_image" %>
