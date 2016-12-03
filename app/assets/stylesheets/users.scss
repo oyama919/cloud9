@@ -10,3 +10,19 @@ h1{
 .list{
   list-style-type: none;
 }
+.db{
+  display: block;
+  border-top: 1px solid #ccc;
+}
+.img{
+  width: 100px;
+  height: 80px;
+  text-align: center;
+  display: block;
+  margin: 20px 0 20px 50%;
+}
+.db img{
+  width: 100%;
+  height: auto;
+  margin-left: -100px;
+}
