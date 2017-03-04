@@ -81,6 +81,6 @@ test:
 #
 production:
   <<: *default
-  database: achive_production
-  username: achive
+  database: achieve_production
+  username: achieve
   password: <%= ENV['ACHIVE_DATABASE_PASSWORD'] %>
