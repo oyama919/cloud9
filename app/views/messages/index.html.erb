@@ -2,13 +2,13 @@
   <%= link_to 'すべてのメッセージ', '?m=all' %>
 <% end %>
 
-<div class="ui segment">
+<div class="header">
   <% @messages.each do |message| %>
     <% if message.body %>
       <% user = User.find(message.user_id) %>
       <div class="item">
         <div class="content">
-          <div class="header"><strong><%= user.name %></strong> <%= message.message_time %></div>
+          <p class="user"><strong><%= user.name %></strong> <%= message.message_time %></p>
           <div class="list">
             <div class="item">
               <i class="right triangle icon"></i>
@@ -26,7 +26,7 @@
     <%= f.text_area :body, class: "form-control" %>
   </div>
     <%= f.text_field :user_id, value: current_user.id, type: "hidden"  %>
-  <div>
+  <div class="btn btn-large btn-primary">
     <%= f.submit "メッセージを送る" %>
   </div>
 

@@ -1,20 +1,18 @@
 <div class="container">
-  <h2>ユーザー</h2>
-  <% @users.each do |user| %>
-      <div class="db">
-        <p class="img"><%= profile_img(user) %><p>
-        <%= user.email %>
-        <% if user.id != current_user.id %>
-          <li>
-            <div class="item">
-              <%= link_to user.name, user %>
-              <%= link_to 'メッセージ', conversations_path(sender_id: current_user.id, recipient_id: user.id), method: 'post'%>
-            </div>
+  <div class="col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-1">
+    <h2>ユーザー</h2>
+    <% @users.each do |user| %>
+        <div class="db">
+          <p class="img"><%= profile_img(user) %><p>
+          <p><%= user.email %></p>
+          <% if user.id != current_user.id %>
+            <p><%= link_to user.name, user %><p>
+            <p><%= link_to 'メッセージ', conversations_path(sender_id: current_user.id, recipient_id: user.id), method: 'post'%>
             <%= render partial: 'follow_form', locals: { user: user } if signed_in?   %>
-          </li>
-        <% end %>
-        <%= link_to user.name, user_path(user) %>
-      </div>
-      <br>
-  <% end %>
+          <% end %>
+          <p><%= link_to user.name, user_path(user) %></p>
+        </div>
+        <br>
+    <% end %>
+  </div>
 </div>

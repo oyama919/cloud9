@@ -13,6 +13,9 @@
  *= require_tree .
  *= require_self
  */
+body{
+  line-height: 1.6;
+}
 mt{
     padding-top: 10px;
 }
@@ -26,3 +29,27 @@ img{
   float: left;
   margin: 10px 10px 0 0;
 }
+
+li{list-style-type: none;}
+
+p{ font-size: 16px;}
+.form-brock{
+  width: 70%;
+  margin: 0 auto;
+}
+input[type="submit"]{
+  width: 200px;
+}
+input[type="submit"] .btn-block{
+  width: 30%;
+  margin: auto;
+}
+textarea{
+  min-height: 150px;
+  resize: vertical;
+}
+.page-title{
+  font-size: 24px;
+  margin-bottom: 50px;
+}
+/*btn btn-default btn-sm btn-success*/

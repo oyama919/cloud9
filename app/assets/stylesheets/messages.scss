@@ -1,3 +1,15 @@
 // Place all the styles related to the Messages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.header{
+  font-size: 20px;
+  padding: 50px 0 20px;
+  .user{font-size: 22px;}
+}
+.field{
+  width: 70%;
+  margin: auto;
+}
+.field textarea{
+  margin-bottom: 30px;
+}

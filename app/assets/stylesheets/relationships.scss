@@ -1,3 +1,59 @@
 // Place all the styles related to the Relationships controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.edit-container{
+  padding-top: 50px;
+  label,img{margin-bottom: 20px;}
+  label{font-size: 18px;}
+  input{margin: 0 auto}
+  .form-control{
+    width: 320px;
+    margin-bottom: 30px;
+  }
+  input[type="file"]{
+    margin-bottom: 50px;
+    display: flex;
+  }
+  input[type="submit"]{
+    width: 200px;
+    margin-bottom: 20px;
+    padding: 5px 0;
+    color: #fff;
+    background-color: #428bca;
+    border: 1px solid #357ebd;
+    border-radius: 4px;
+  }
+  input[type="submit"]:hover{
+    background-color: #4182ba;
+    border: 1px solid #357ebd;
+  }
+  .cancel{
+    input[type="submit"]{
+      background-color: #ca3;
+      border: 1px solid #ca3;
+      height: 30px;
+      font-size: 14px;
+      opacity: 0.8;
+    }
+    input[type="submit"]:hover{
+      background-color: #bb9d33;
+      border: 1px solid #b99928;
+    }
+  }
+  .btn{
+    width: 200px;
+    padding: 5px 0;
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .lead{
+    font-size: 15px;
+    margin-bottom: 10px;
+  }
+}
+@media (max-width: 767px) {
+  .content{padding: 10px}
+  .edit-container{padding: 50px 0 0;}
+  .edit-container .form-control{width: 100%;}
+}

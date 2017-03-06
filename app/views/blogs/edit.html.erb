@@ -1,9 +1,10 @@
 <div class="container">
   <div class="col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-1">
-    <h2>ブログを作成する</h2>
-    <br><br>
-<h4> ユーザー名:&nbsp;&nbsp;<%= @blog.user.name  %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ID:&nbsp;&nbsp;<%= @blog.user.id  %></h4>
-    <br><br>
+    <h2 class="page-title">ブログを作成する</h2>
+    <dl class="user-brock">
+      <dt>ユーザー名:<dt><dd><%= @blog.user.name  %></dd>
+      <dt>ID:</dt><dt><dd><%= @blog.user.id  %></dd>
+    </dl>
     <%= render 'form' %>
   </div>
 </div>

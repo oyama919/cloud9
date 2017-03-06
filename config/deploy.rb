@@ -13,6 +13,7 @@ set :branch, ENV['BRANCH'] || 'master'
 set :deploy_to, '/var/www/cloud9'
 
 # シンボリックリンクをはるフォルダ・ファイル
+# app/sharedをみる
 set :linked_files, %w{.env config/secrets.yml}
 set :linked_dirs, %w{log tmp/pids tmp/cache tmp/sockets public/uploads}
 

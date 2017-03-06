@@ -11,8 +11,31 @@
     word-wrap: break-word;
   }
 }
-input[type="submit"].btn-block{
-  margin: 15px 0;
+.text-span{margin-left: 5px;}
+.user-brock{
+  margin-bottom: 50px;
+  dd{
+    display: inline-block;
+  }
+  dt{margin-left: 5px;}
+}
+.confirm-brock{
+  margin-bottom: 50px;
+  dt,dd{
+    display: inline-block;
+    font-size: 22px;
+  }
+  dt{margin-left: 5px;}
+  input,form{
+    width: 200px;
+    margin: auto;
+  }
+  input{
+    margin-bottom: 20px;
+  }
+}
+.user-item{
+  display: inline-block;
 }
 .page-top-btn2 {
   display: none;
