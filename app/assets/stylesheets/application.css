@@ -38,8 +38,6 @@ p{font-size: 16px;}
 
 input[type="submit"]{
   width: 200px;
-  background: none;
-  border: none;
 }
 input[type="submit"] .btn-block{
   width: 30%;
