@@ -26,8 +26,5 @@
     <%= f.text_area :body, class: "form-control" %>
   </div>
     <%= f.text_field :user_id, value: current_user.id, type: "hidden"  %>
-  <div class="btn btn-large btn-primary">
     <%= f.submit "メッセージを送る" %>
-  </div>
-
 <% end %>

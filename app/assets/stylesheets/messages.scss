@@ -6,10 +6,41 @@
   padding: 50px 0 20px;
   .user{font-size: 22px;}
 }
-.field{
-  width: 70%;
+.field,.item{
+  width: 500px;
   margin: auto;
+}
+.field{
+  margin-bottom: 20px;
+}
+.item{
+  display: block;
+  word-wrap: break-word;
+  text-align: left;
+  padding: 30px 20px;
+  box-sizing: border-box;
+}
+@media screen and (max-width:480px) {
+  .field,.item{
+    width: 100%;
+  }
+  .item{
+    padding: 30px 0;
+  }
 }
 .field textarea{
   margin-bottom: 30px;
+}
+input[type="submit"]{
+  width: 200px;
+  margin-bottom: 20px;
+  padding: 5px 0;
+  color: #fff;
+  background-color: #428bca;
+  border: 1px solid #357ebd;
+  border-radius: 4px;
+}
+input[type="submit"]:hover{
+  background-color: #4182ba;
+  border: 1px solid #357ebd;
 }
