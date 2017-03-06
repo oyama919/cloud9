@@ -16,9 +16,6 @@
 body{
   line-height: 1.6;
 }
-mt{
-    padding-top: 10px;
-}
 footer{
     margin-top: 100px;
 }
@@ -32,11 +29,13 @@ img{
 
 li{list-style-type: none;}
 
-p{ font-size: 16px;}
+p{font-size: 16px;}
+
 .form-brock{
   width: 70%;
   margin: 0 auto;
 }
+
 input[type="submit"]{
   width: 200px;
   background: none;
@@ -54,4 +53,3 @@ textarea{
   font-size: 24px;
   margin-bottom: 50px;
 }
-/*btn btn-default btn-sm btn-success*/
