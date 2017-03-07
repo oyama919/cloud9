@@ -13,3 +13,4 @@
 /tmp
 #dotenv-rails
 .env
+ユーザー.rb
